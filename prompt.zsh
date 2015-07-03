@@ -96,8 +96,9 @@ function promptSetup () {
     PS1+="%{$terminfo_down_sc$VCS_LINE$terminfo[rc]%}" # the second line
     PS1+=$PR_STITLE               # tmux title if present
     PS1+=$PR_VCSSIGN              # version control part if present
-    PS1+=%(?..'%F{136}%B%'?)       # output last error number if present
+    PS1+=%(?..'%F{136}%B%'?)      # output last error number if present
     PS1+=$PR_SIGN                 # the user sign
+    PS1+=" %B%F{cyan}%(4~|...|)%3~%F"              # current dir
     PS1+=" "                      # an additional space
 
     # reset the tmux title

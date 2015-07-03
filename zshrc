@@ -47,3 +47,14 @@ foreach file (`echo $sources`)
     fi
 end
 
+
+# alias
+alias ls='ls --color=auto'
+alias ll='ls -ahl'
+export EDITOR=vim
+
+echo
+echo "=============== Quote Of The Day ==============="
+fortune
+echo "================================================"
+echo
