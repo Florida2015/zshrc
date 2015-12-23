@@ -38,7 +38,7 @@ sources+="$ZSH_CONFIG/fasd.zsh"
 # Private aliases and adoptions added at the very end (e.g. to start byuobu)
 sources+="$ZSH_CONFIG/private.final.zsh"
 
-
+sources+="$ZSH_CONFIG/mine.zsh"
 
 # try to include all sources
 foreach file (`echo $sources`)
@@ -47,10 +47,21 @@ foreach file (`echo $sources`)
     fi
 end
 
+export EDITOR=vim
+export GOPATH=/home/shenhd/workspace/go
+export TERM=xterm-256color
+
+export ZOOKEEPER_HOME=/opt/zookeeper
+export SCALA_HOME=/opt/scala
+export SBT_HOME=/opt/sbt
+export KAFKA_HOME=/opt/kafka
+export SPARK_HOME=/opt/spark
+export JSTORM_HOME=/opt/jstorm
+export PATH="$PATH:$ZOOKEEPER_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$KAFKA_HOME/bin:$SPARK_HOME/bin:$JSTORM_HOME/bin"
 
 # alias
-alias ls='ls --color=auto'
-alias ll='ls -ahl'
+alias ls="ls --color=auto"
+alias ll="ls -hl"
 export EDITOR=vim
 
 echo
